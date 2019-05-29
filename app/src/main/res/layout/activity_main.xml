@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cactus_wallpaper"
+    tools:context="MainActivity">
+
+    <TextView
+        android:id="@+id/textViewUserLoginName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:text="@string/logowanie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/textPrimary"
+        android:textSize="36dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextEmailLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:backgroundTintMode="screen"
+        android:hint="@string/email_edittext"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/textPrimary" />
+
+    <EditText
+        android:id="@+id/editTextPasswordLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:hint="@string/haslo_edittext"
+        android:inputType="textPassword"
+        android:textColor="@color/textPrimary" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/logowanie_button"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="logowanie"/>
+
+    <Button
+        android:id="@+id/textViewSignUp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:text="@string/rejestracja_logowanie"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:onClick="rejestracja"/>
+
+</LinearLayout>

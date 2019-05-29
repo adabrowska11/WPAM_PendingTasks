@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9148F23"
+    android:orientation="vertical"
+    tools:context="com.example.pendingtasks.Rejestracja">
+
+    <TextView
+        android:id="@+id/textViewUserRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/rejestracja_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="132dp"
+        android:layout_height="191dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/cactus" />
+
+    <EditText
+        android:id="@+id/editTextEmailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/email_text"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/editTextPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/haslo_text"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:text="@string/rejestracja_button"
+        android:textColor="#F0F0F0"
+        android:onClick="registerUser"/>
+
+    <TextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/logowanie_rejestracja"
+        android:textAlignment="center"
+        android:textColor="#cfd8dc"
+        android:onClick="LogIn"/>
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/accentPrimary"
+    tools:context="com.example.pendingtasks.NewTask">
+
+    <ScrollView
+        android:layout_width="347dp"
+        android:layout_height="653dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="715dp"
+            android:dividerPadding="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="267dp">
+
+            <TextView
+                android:id="@+id/nazwa_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/nazwa_text"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nazwa_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ems="10"
+                android:hint="@string/nazwa_editText_text"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/nazwa_label"
+                app:layout_constraintStart_toEndOf="@+id/nazwa_label" />
+
+            <TextView
+                android:id="@+id/opis_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/opis_text"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nazwa_label" />
+
+            <EditText
+                android:id="@+id/opis_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/opis_editText_text"
+                android:inputType="textMultiLine"
+                android:textColor="@color/textPrimary"
+                app:layout_constraintBaseline_toBaselineOf="@+id/opis_label"
+                app:layout_constraintStart_toEndOf="@+id/opis_label" />
+
+            <TextView
+                android:id="@+id/metoda_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/metoda_label"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opis_label" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/metoda_label">
+
+                <RadioButton
+                    android:id="@+id/lokalizacja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/lokalizacja" />
+
+                <RadioButton
+                    android:id="@+id/dataigodzina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/data_i_godzina" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/data_label"
+                android:textColor="#E2110F0F"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <Button
+                android:id="@+id/button_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="showDatePicker"
+                android:text="@string/data_button"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/data_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.55"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/time_label"
+                android:textColor="#E2110F0F"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/data_label" />
+
+            <Button
+                android:id="@+id/button_time"
+                android:layout_width="90dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="showTimePicker"
+                android:text="@string/time_button"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/time_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.554"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--<Button
+                android:id="@+id/button_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:text="@string/create_task_button"
+                android:onClick="createTask"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_time" />-->
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

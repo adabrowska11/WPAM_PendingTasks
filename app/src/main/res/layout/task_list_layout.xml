@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewTaskNazwa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Nazwa"
+        android:textColor="@color/textPrimary"/>
+
+    <TextView
+        android:id="@+id/textViewTaskOpis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Opis"
+        android:textColor="@color/textPrimary"/>
+
+    <TextView
+        android:id="@+id/textViewTaskData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Data"
+        android:textColor="@color/textPrimary"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/textViewTaskCzas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Czas"
+        android:textColor="@color/textPrimary"
+        android:visibility="visible"/>
+
+</LinearLayout>
